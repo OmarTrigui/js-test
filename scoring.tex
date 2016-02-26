@@ -1,0 +1,145 @@
+\documentclass{article}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[box,completemulti]{automultiplechoice}
+
+\begin{document}
+
+\element{qqs}{
+\begin{question}{rr}
+  \\~\\
+  What whould be the result of : isNaN(true)
+  \begin{choices}
+    \wrongchoice{true}\scoring{0}
+    \correctchoice{false}\scoring{1}
+    \wrongchoice{NaN}\scoring{0}
+    \wrongchoice{undefined}\scoring{0}
+  \end{choices}
+\end{question}
+}
+
+\element{qqs}{
+\begin{question}{ss}
+	\\~\\
+  What whould be the result of : Boolean("false") 
+  \begin{choices}
+    \correctchoice{true}\scoring{1}
+    \wrongchoice{false}\scoring{0}
+    \wrongchoice{boolean}\scoring{0}
+    \wrongchoice{undefined}\scoring{0}
+  \end{choices}
+\end{question}
+}
+
+\element{qqs}{
+\begin{question}{xx}
+	\\~\\
+  The output of the comparison \{\} == \{\} will be :
+  \begin{choices}
+    \correctchoice{false}\scoring{1}
+    \wrongchoice{true}\scoring{0}
+    \wrongchoice{Illegal comparison}\scoring{0}
+    \wrongchoice{undefined is not a function}\scoring{0}
+  \end{choices}
+\end{question}
+}
+
+\element{qqs}{
+\begin{question}{xsxx}
+	\\~\\
+  > var undefined = 5; \\
+  > console.log(undefined); 
+  \\~\\
+  After executing these instructions, The printed result will be : 
+  \begin{choices}
+    \wrongchoice{5}\scoring{0}
+    \wrongchoice{random output}\scoring{0}
+    \correctchoice{undefined}\scoring{1}
+    \wrongchoice{Uncaught ReferenceError: undefined is not defined}\scoring{0}
+  \end{choices}
+\end{question}
+}
+
+\element{qqs}{
+\begin{question}{xxdx}
+  \\~\\
+  What will be the result of : typeof NaN
+  \\
+  \begin{choices}
+    \wrongchoice{undefined}\scoring{0}
+    \wrongchoice{NaN}\scoring{0}
+    \correctchoice{number}\scoring{1}
+    \wrongchoice{object}\scoring{0}
+  \end{choices}
+\end{question}
+}
+
+
+
+\element{qqs}{
+\begin{question}{xxfx}
+  \\~\\
+  After executing these instructions, what will be the output : 
+  \\
+  \\>var myArray = Array.apply(null, {length: 5}).map(Number.call, Number);
+  \\>myArray.push(7);
+  \\>myArray.splice(2,1);
+  \\>myArray.shift();
+  \\>myArray.pop();
+  \\>console.log(myArray);
+  \begin{choices}
+    \wrongchoice{[ 1, 4, 6 ]}\scoring{0}
+    \wrongchoice{[ 1, 2, 3, 4, 5 ]}\scoring{0}
+    \correctchoice{[ 1, 3, 4 ]}\scoring{1}
+    \wrongchoice{[ 1, 2, 3 ]}\scoring{0}
+  \end{choices}
+\end{question}
+}
+
+\element{qqs}{
+\begin{question}{let}
+  \\~\\
+  What's the main difference between 'var' and 'let' 
+  \begin{choices}
+    \wrongchoice{'let' is the new 'var'}\scoring{0}
+    \wrongchoice{scoping and visibility of variables}\scoring{0}
+    \correctchoice{They are identical everywhere}\scoring{1}
+    \wrongchoice{'let' is used for static declarations while 'var' is not}\scoring{0}
+  \end{choices}
+\end{question}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\onecopy{20}{
+
+\noindent{\bf QCM  \hfill 1 valid question to pass the test, Gud Luck} 
+
+\vspace*{.5cm}
+\begin{minipage}{.4\linewidth}
+\centering\large\bf Orion Kingdom \\ \small{Prepared by Omar Trigui}\end{minipage}
+\namefield{\fbox{\begin{minipage}{.6\linewidth}
+Name:
+
+\vspace*{.5cm}\dotfill
+\vspace*{10mm}
+\end{minipage}}}
+
+\vspace*{5mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\shufflegroup{qqs}
+
+\insertgroup{qqs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+
+}
+
+\end{document}
