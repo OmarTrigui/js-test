@@ -5,6 +5,19 @@
 
 \usepackage[box,completemulti]{automultiplechoice}
 
+\usepackage{listings}
+
+\lstset{%
+  basicstyle=\small\ttfamily,
+  breaklines=true,
+  columns=fullflexible,
+  frame=single,
+  frameround=tttt,
+  showstringspaces=false
+}
+
+
+
 \begin{document}
 
 \element{qqs}{
@@ -83,7 +96,7 @@
   \\~\\
   After executing these instructions, what will be the output : 
   \\
-  \\>var myArray = Array.apply(null, {length: 5}).map(Number.call, Number);
+  \\>var myArray = Array.apply(null, $\left\{length: 5\right\}$).map(Number.call, Number);
   \\>myArray.push(7);
   \\>myArray.splice(2,1);
   \\>myArray.shift();
@@ -125,18 +138,62 @@
 }
 
 
+\element{qqs}{
+\begin{question}{pow}
+  \\~\\
+  In javascript, the range of integers that can be safely handled is : 
+  \begin{choices}
+    \correctchoice{[$-2^{53}$,$2^{53}$]}\scoring{0}
+    \wrongchoice{[$-2^{32}$,$2^{32}$]}\scoring{0}
+    \wrongchoice{[$-2^{64}$,$2^{64}$]}\scoring{1}
+    \wrongchoice{[$-2^{33}$,$2^{33}$]}\scoring{0}
+  \end{choices}
+\end{question}
+}
+
+\element{qqs}{
+\begin{question}{sum}
+  \\~\\
+  What will be the sum of 0.1 and 0.2 : 
+  \begin{choices}
+    \wrongchoice{0.3}\scoring{0}
+    \wrongchoice{0.30000000000000003}\scoring{0}
+    \correctchoice{0.30000000000000004}\scoring{1}
+    \wrongchoice{0.299999999999999999}\scoring{0}
+  \end{choices}
+\end{question}
+}
+
+\element{qqs}{
+\begin{question}{ang}
+   
+  \lstinputlisting[%
+    language=HTML,
+    stringstyle=\color{blue}
+  ]{templates/angular.html}
+  
+  After executing this code, you will get :
+  
+  \begin{choices}
+    \wrongchoice{A rendered HTML : message}\scoring{0}
+    \wrongchoice{A rendered HTML : a blank page}\scoring{0}
+    \correctchoice{Error in the Console : Infinite \$digest Loop}\scoring{1}
+    \wrongchoice{Error in the Console : Syntax error}\scoring{0}
+  \end{choices}
+\end{question}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \onecopy{20}{
 
-\noindent{\bf QCM  \hfill 1 valid question to pass the test, Gud Luck} 
+\noindent{\bf QCM  \hfill Good Luck} 
 
 \vspace*{.5cm}
 \begin{minipage}{.4\linewidth}
-\centering\large\bf Orion Kingdom \\ \small{Prepared by Omar Trigui}\end{minipage}
+\centering\large\bf Orion Code \\ \small{Prepared by Omar Trigui}\end{minipage}
 \namefield{\fbox{\begin{minipage}{.6\linewidth}
-Name:
+Full candidate name:
 
 \vspace*{.5cm}\dotfill
 \vspace*{10mm}

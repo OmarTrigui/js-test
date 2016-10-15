@@ -1,0 +1,18 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script>
+	angular.module('testExample', [])
+	.controller('ExampleController', ['$scope', function($scope) {
+		var data = [];
+		$scope.filters = function() {
+			data.push({
+				test: 'message'
+			});
+			return data;
+		}
+	}]);
+</script>
+<body ng-app="testExample" ng-controller="ExampleController">
+	<div ng-repeat="filter in filters()">
+		{{ filter.test }}
+	</div>
+</body>
